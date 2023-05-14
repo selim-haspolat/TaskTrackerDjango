@@ -18,9 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 from todo.views import TodoView
+from todo.views import changeIsDone
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('change_is_done/<int:pk>', changeIsDone),
 ]
 
 router = DefaultRouter()
